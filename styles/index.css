@@ -81,6 +81,14 @@ form {
 	text-align: center;
 }
 
+.social-icon
+{
+	src: local("res/fb.svg");
+	size: 2px;
+	color: #222;
+	background-color: #eee;
+}
+
 input {
 	background-color: #eee;
 	border: none;

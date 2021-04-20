@@ -21,20 +21,26 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="acc_check.php" method="GET">
 			<h1>Sign in</h1>
 			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="social-icon"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" placeholder="Email" id="email" name="email" />
+			<input type="password" placeholder="Password" id="password" name="password"/>
 			<a href="#">Forgot your password?</a>
 			<button>Sign In</button>
 		</form>
 	</div>
+   <!-- <?php
+        if(isset($_SESSION["error"])){
+            $error = $_SESSION["error"];
+            echo "<script>alert($error) </script>";
+        }
+    ?> --> 
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
