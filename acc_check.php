@@ -6,18 +6,18 @@
         $password = $_GET["password"]; 
         $error='Invalid Credentials !';
         $query = mysqli_query($conn,"SELECT acctype FROM login WHERE email = '".$mail."' AND  passwd = '".$password."'");
-        $acctype = mysqli_fetch_assoc($query);
-        if($acctype != "")
+        $res = mysqli_fetch_assoc($query);
+        if($res != "")
         {
             session_start();
             $_SESSION["logged_in"] = true; 
-            $_SESSION["name"] = $name; 
-            echo "Inside If";
+            $_SESSION["name"] = $row['name']; 
+            header("location: cus_session.html");
         }
         else
         {
             echo "<script>alert('$error') </script>";
-        //    header("location: index.html");
+            //header("location: index.html");
         }
     }
 ?>
