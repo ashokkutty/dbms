@@ -136,6 +136,7 @@ header .logo
   width: 30%;
   padding: 5em;
 }
+
 .row::after {
   content: "";
   clear: both;
